@@ -1,16 +1,15 @@
-import {Col, Container, Row, Button,Nav, Navbar, NavDropdown} from "react-bootstrap";
+import { Container,Nav, Navbar,} from "react-bootstrap";
 
 
 
 
 function App() {
   return (
-      <>
-          <img src={require('./images/logo.png')} alt="" width="50" height="50"/>
+
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
               <Container>
-                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                  <Navbar.Collapse id="responsive-navbar-nav justify-center">
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mr-0"/>
+                  <Navbar.Collapse id="responsive-navbar-nav">
                       <Nav className="mx-auto">
                           <Nav.Link href="#Home">Главная</Nav.Link>
                           <Nav.Link href="#Products">Продукты</Nav.Link>
@@ -21,7 +20,7 @@ function App() {
 
                   </Navbar.Collapse>
               </Container>
-          </Navbar></>
+          </Navbar>
 
   );
 }
