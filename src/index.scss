@@ -1,3 +1,22 @@
-.nav-bg{
-  background: url("/image/nav_bg.png") no-repeat;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Georgia, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+}
+
+article h1 {
+  margin: 1rem 0;
 }
