@@ -1,4 +1,4 @@
-import "../styles/navbar.scss"
+
 import {useState} from "react";
 
 export default function Navbar() {
@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <nav className="navigation">
             <a href="/" className="brand-name">
-                MacroSoft
+                <img className="logo" src={require('./logo.png')} alt=""/>
             </a>
             <button className="hamburger"  onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
