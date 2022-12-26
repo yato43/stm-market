@@ -1,5 +1,7 @@
-
+import  logo from "../image/logo.png"
 import {useState} from "react";
+
+
 
 export default function Navbar() {
     const [isHamActive, setIsHamActive] = useState(false)
@@ -7,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className="navigation">
             <a href="/" className="brand-name">
-                <img className="logo" src={require('./logo.png')} alt=""/>
+                <img className="logo" src={logo} alt=""/>
             </a>
             <button className="hamburger"  onClick={() => {
                 setIsNavExpanded(!isNavExpanded);

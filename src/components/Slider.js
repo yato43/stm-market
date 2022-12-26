@@ -2,7 +2,7 @@ import {Button, Carousel} from "react-bootstrap";
 
 export default function Slider() {
     return(
-        <Carousel fade interval={100000}>
+        <Carousel fade interval={1000}>
             <Carousel.Item>
                 <img
                     className="d-block w-100 h-100"
