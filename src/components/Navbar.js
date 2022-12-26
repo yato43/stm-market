@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className="navigation">
             <a href="/" className="brand-name">
-                <img className="logo" src={logo} alt=""/>
+                <img className="logo" src={logo} alt="logo"/>
             </a>
             <button className="hamburger"  onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
@@ -28,13 +28,19 @@ export default function Navbar() {
                 className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
                 <ul>
                     <li>
-                        <a href="/home">Home</a>
+                        <a href="/home">Главная</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/products">Продукция</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/about">О нас</a>
+                    </li>
+                    <li>
+                        <a href="/tools">Инструменты</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Контакты</a>
                     </li>
                 </ul>
             </div>

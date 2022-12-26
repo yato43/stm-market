@@ -2,25 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #fff;
   font-family: Georgia, "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body{
+body {
 
 }
 
-.container {
-  max-width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1rem;
-}
+.window{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-article h1 {
-  margin: 1rem 0;
+
+
 }
 
 .navigation {
@@ -36,36 +33,36 @@ article h1 {
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
-.logo{
-  width: 120px;
-  height: 120px;
+.logo {
+  width: 100%;
 }
 
-.brand-name {
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
-  margin-left: 1rem;
-}
+
+
 .navigation-menu {
   margin-left: auto;
+  margin-right: auto;
 }
+
 .navigation-menu ul {
   display: flex;
   padding: 0;
 }
+
 .navigation-menu li {
   // removes default disc bullet for li tags and applies margin to left & right side
   list-style-type: none;
   margin: 0 1rem;
 }
+
 .navigation-menu li a {
   // increases the surface area of the anchor tag to span more than just the anchor text
   text-decoration: none;
   display: block;
   width: 100%;
+  color: #fff;
+  font-weight: 700;
 }
-
 
 
 .hamburger {
@@ -106,6 +103,7 @@ article h1 {
     height: calc(100vh - 77px);
     background-color: #1EBCF2;
     border-top: 1px solid black;
+    z-index: 3;
   }
 
   .navigation-menu.expanded ul {
@@ -116,6 +114,7 @@ article h1 {
     // centers link text and strips off margin
     text-align: center;
     margin: 0;
+    border-bottom: 1px  solid #000;
   }
   .navigation-menu li a {
     color: black;
@@ -129,7 +128,6 @@ article h1 {
 }
 
 
-
 #nav-toggle {
   position: absolute;
   left: 0;
@@ -140,6 +138,7 @@ article h1 {
   cursor: pointer;
   padding: 10px 35px 16px 0;
 }
+
 #nav-toggle span,
 #nav-toggle span:before,
 #nav-toggle span:after {
@@ -152,9 +151,11 @@ article h1 {
   display: block;
   content: "";
 }
+
 #nav-toggle span:before {
   top: -10px;
 }
+
 #nav-toggle span:after {
   bottom: -10px;
 }
@@ -164,18 +165,22 @@ article h1 {
 #nav-toggle span:after {
   transition: all 500ms ease-in-out;
 }
+
 #nav-toggle.active span {
   transform: rotate(180deg);
   background: transparent;
 }
+
 #nav-toggle.active span:before,
 #nav-toggle.active span:after {
   top: 0;
 }
+
 #nav-toggle.active span:before {
   transform: rotate(45deg);
   background: black;
 }
+
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
   background: blue;
@@ -183,27 +188,45 @@ article h1 {
 
 //carousel
 
+.slider{
+  align-self: stretch;
+}
 
-.carousel-indicators [data-bs-target]{
+.carousel{
+  height: calc(100vh - 160px);
+
+}
+.carousel-inner{
+  height: 100%;
+}
+
+.carousel-item{
+  height: 100%;
+}
+
+.carousel-indicators [data-bs-target] {
   width: 10px !important;
   height: 10px !important;
   border-radius: 50%;
-  background-color: #fff!important;
-  opacity: 1!important;
+  background-color: #fff !important;
+  opacity: 1 !important;
+  z-index: 1!important;
 }
+
 .carousel-indicators .active {
   background-color: #060856 !important;
 }
 
 //3. Footer
-footer{
+footer {
   display: flex;
   width: 100%;
   height: 44px;
   background-color: #383bd9;
   justify-content: space-between;
 
-  .copyright{
+  .copyright {
+    color: #fff;
     align-self: end;
     font-size: 11px;
     font-family: 'Inter', sans-serif;
@@ -212,20 +235,40 @@ footer{
     opacity: 0.8;
   }
 
-  .social{
-    display: flex;
-    li{
-      justify-content: space-between;
-      align-self: center;
+  .social-block {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 40%;
+    @media screen and (max-width: 768px){
+
+        display: none;
+
     }
   }
-  .contacts-block{
-    //margin-right: 1%;
-    .contacts{
+  
+
+
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff !important;
+    cursor: pointer;
+
+    &:hover {
+        color: red!important;
+
+    }
+  }
+
+  .contacts-block {
+    margin-right: 4%;
+    color: #fff;
+    .contacts {
       display: flex;
+      text-decoration: none;
       flex-direction: column;
       padding-right: 30px;
-      font-size: 13px;
+      font-size: 10px;
     }
   }
 
