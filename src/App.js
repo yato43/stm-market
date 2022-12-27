@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar"
-// import Slider from "./components/Slider";
 import Footer from "./components/Footer";
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
