@@ -1,15 +1,20 @@
 import  logo from "../image/logo.png"
 import {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 
 
 export default function Navbar() {
+    let activeStyle = {
+        textDecoration: "underline",
+    };
+
     const [isHamActive, setIsHamActive] = useState(false)
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     return (
         <nav className="navigation">
-            <Link to="/" className="brand-name">
+            <p className="brand">Точный инструмент  +  Качественная продукция = Успех бизнеса</p>
+            <Link to="/" className="brand-name" >
                 <img className="logo" src={logo} alt="logo"/>
             </Link>
             <button className="hamburger"  onClick={() => {
@@ -29,19 +34,29 @@ export default function Navbar() {
                 className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
                 <ul>
                     <li>
-                        <Link to="/">Главная</Link>
+                        <NavLink to="/" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Главная</NavLink>
                     </li>
                     <li>
-                        <Link to="/products">Продукция</Link>
+                        <NavLink to="/products" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Продукция</NavLink>
                     </li>
                     <li>
-                        <Link to="/about">О нас</Link>
+                        <NavLink to="/about" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>О нас</NavLink>
                     </li>
                     <li>
-                        <Link to="/tools">Инструменты</Link>
+                        <NavLink to="/tools" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Инструменты</NavLink>
                     </li>
                     <li>
-                        <Link to="/contact">Контакты</Link>
+                        <NavLink to="/contact" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Контакты</NavLink>
                     </li>
                 </ul>
             </div>
