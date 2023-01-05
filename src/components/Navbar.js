@@ -13,7 +13,7 @@ export default function Navbar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     return (
         <nav className="navigation">
-            <p className="brand">Точный инструмент  +  Качественная продукция = Успех бизнеса</p>
+            <p className="brand-word">Точный инструмент  +  Качественная продукция = Успех бизнеса</p>
             <Link to="/" className="brand-name" >
                 <img className="logo" src={logo} alt="logo"/>
             </Link>
