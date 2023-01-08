@@ -1,11 +1,20 @@
-import mechanism from "../image/test_mech.png";
 
-export default function Card(){
+import {Link} from "react-router-dom";
+
+export default function Card(props){
     return(
-        <div className="cards">
-            <img src={mechanism} alt=""/>
-            <p>Заточные станки с ЧПУ</p>
+        <div className="card-block">
+            <Link to={props.link}>
+                <div className="cards" style={{
+                backgroundImage: 'url(' + props.image + ')',
+                backgroundSize: '90%, cover',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: '10px',
+            }}>
 
+                <p>{props.name}</p>
+
+            </div></Link>
         </div>
     )
 }

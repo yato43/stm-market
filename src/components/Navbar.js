@@ -4,9 +4,11 @@ import {Link, NavLink} from "react-router-dom";
 
 
 
+
 export default function Navbar() {
     let activeStyle = {
-        textDecoration: "underline",
+
+        color: "#a6a6a6"
     };
 
     const [isHamActive, setIsHamActive] = useState(false)
@@ -14,7 +16,7 @@ export default function Navbar() {
     return (
         <nav className="navigation">
             <p className="brand-word">Точный инструмент  +  Качественная продукция = Успех бизнеса</p>
-            <Link to="/" className="brand-name" >
+            <Link to="/" className="brand-name" onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}>
                 <img className="logo" src={logo} alt="logo"/>
             </Link>
             <button className="hamburger"  onClick={() => {
@@ -36,27 +38,27 @@ export default function Navbar() {
                     <li>
                         <NavLink to="/" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Главная</NavLink>
+                        } onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}  >Главная</NavLink>
                     </li>
                     <li>
                         <NavLink to="/products" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Продукция</NavLink>
+                        } onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}>Продукция</NavLink>
                     </li>
                     <li>
                         <NavLink to="/about" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>О нас</NavLink>
+                        } onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}>О нас</NavLink>
                     </li>
                     <li>
                         <NavLink to="/tools" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Инструменты</NavLink>
+                        } onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}>Инструменты</NavLink>
                     </li>
                     <li>
                         <NavLink to="/contact" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Контакты</NavLink>
+                        } onClick={() => {setIsHamActive(!isHamActive); setIsNavExpanded(!isNavExpanded)}}>Контакты</NavLink>
                     </li>
                 </ul>
             </div>

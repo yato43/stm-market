@@ -1,45 +1,51 @@
+import first from '../image/sliderImg/first.jpg'
+import second from '../image/sliderImg/second.jpg'
+import third from '../image/sliderImg/third.jpg'
+
+
 import {Button, Carousel} from "react-bootstrap";
 
+
 export default function Slider() {
-    return(
+    return (
         <div className="slider">
-            <Carousel fade interval={1000000}>
+            <Carousel fade interval={2000}>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100 h-100"
-                        src={require('./first.jpg')}
-                        alt="First slide"
-                    />
+                    <div style={{
+                        backgroundImage: 'url(' + first + ')',
+                        width: "100%",
+                        height: '100%',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}/>
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <Button className="slider-btn">Перейти</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100 h-100"
-                        src={require('./first.jpg')}
-                        alt="Second slide"
-                    />
+                    <div style={{
+                        backgroundImage: 'url(' + second + ')',
+                        width: "100%",
+                        height: '100%',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}/>
 
                     <Carousel.Caption>
-                        <Button className="alert-primary"></Button>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <Button className="slider-btn">Перейти</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100 h-100"
-                        src={require('./first.jpg')}
-                        alt="Third slide"
-                    />
+                    <div style={{
+                        backgroundImage: 'url(' + third + ')',
+                        width: "100%",
+                        height: '100%',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}/>
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <Button className="slider-btn">Перейти</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

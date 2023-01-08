@@ -1,6 +1,6 @@
-
 import Card from "../components/Card";
-import {Link} from "react-router-dom";
+
+import mechanism from "../image/test_mech.png";
 
 
 function Products() {
@@ -8,15 +8,15 @@ function Products() {
         <div className="container">
             <h1>Станки</h1>
 
-                <div className="goods">
-                    <Link to="/t3000"><Card/></Link>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </div>
+            <div className="goods">
+                <Card image={mechanism} name='Полуавтомат шлифовально-заточный с ЧПУ 454-ой серии' link = '/t3000'/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+            </div>
         </div>
     );
 }

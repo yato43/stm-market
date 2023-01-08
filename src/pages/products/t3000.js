@@ -140,7 +140,7 @@ export default function T3000() {
                     <td>Габаритные размеры (с отдельно расположенным оборудованием) (ДхШхВ)</td>
                     <td>1350х3000х2020 мм</td>
                 </tr>
-                <tr>
+                <tr className='tableTitle'>
                     <td>Масса</td>
                     <td>3500 кг</td>
                 </tr>
