@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Tools from "./pages/Tools";
 import Contacts from "./pages/Contacts";
+import T3000 from "./pages/products/t3000";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About/>}/>
             <Route path="/tools" element={<Tools/>}/>
             <Route path="/contact" element={<Contacts/>}/>
+            <Route path="/t3000" element={<T3000/>}/>
         </Routes>
 
         <Footer/>

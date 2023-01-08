@@ -1,5 +1,6 @@
 
 import Card from "../components/Card";
+import {Link} from "react-router-dom";
 
 
 function Products() {
@@ -8,7 +9,7 @@ function Products() {
             <h1>Станки</h1>
 
                 <div className="goods">
-                    <Card/>
+                    <Link to="/t3000"><Card/></Link>
                     <Card/>
                     <Card/>
                     <Card/>
