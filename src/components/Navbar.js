@@ -8,7 +8,7 @@ import {Link, NavLink} from "react-router-dom";
 export default function Navbar() {
     let activeStyle = {
 
-        color: "#a6a6a6"
+        color: "#BBDEFB"
     };
 
     const [isHamActive, setIsHamActive] = useState(false)

@@ -1,7 +1,7 @@
 import {Container, Row, Table} from "react-bootstrap";
 import productImg from "../../image/products/454.jpg"
 
-export default function T3000() {
+export default function P531() {
 
     return (
         <Container id="product-container">
@@ -13,7 +13,7 @@ export default function T3000() {
                     backgroundRepeat: 'no-repeat',
                     borderRadius: '10px',
                 }} className="productImage">
-                    <button>Скачать ТХ PDF</button>
+                    <a href="/src/attachments/stm-market.ru_454.pdf" download><button>Скачать ТХ PDF</button></a>
                 </div>
                 <h3>Описание</h3>
                 <p>Полуавтомат шлифовально-заточный с ЧПУ изготавливается по Техническому заданию, утвержденному

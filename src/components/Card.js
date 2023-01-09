@@ -10,6 +10,7 @@ export default function Card(props){
                 backgroundSize: '90%, cover',
                 backgroundRepeat: 'no-repeat',
                 borderRadius: '10px',
+                    backgroundPosition: "top center"
             }}>
 
                 <p>{props.name}</p>
