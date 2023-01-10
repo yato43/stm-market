@@ -12,7 +12,7 @@ export default function Footer() {
 
             <div className="contacts-block">
                 <ul className="contacts">
-                    <li><a href="">+7 499 348-83-84</a></li>
+                    <li><a href="tel:+74993488384">+7 499 348-83-84</a></li>
                     <li><a href="mailto:stm-market@mail.ru">stm-market@mail.ru</a></li>
                 </ul>
             </div>
