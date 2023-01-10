@@ -5,7 +5,7 @@ export default function P454() {
 
     return (
         <Container id="product-container">
-            <h1>t3000</h1>
+            <h1>Полуавтомат шлифовально-заточный с ЧПУ 454-ой серии</h1>
             <div className='info'>
                 <div style={{
                     backgroundImage: 'url(' + productImg + ')',

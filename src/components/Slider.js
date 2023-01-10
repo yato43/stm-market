@@ -4,6 +4,7 @@ import third from '../image/sliderImg/third.jpg'
 
 
 import {Button, Carousel} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 
 export default function Slider() {
@@ -19,7 +20,7 @@ export default function Slider() {
                         backgroundPosition: 'center'
                     }}/>
                     <Carousel.Caption>
-                        <Button className="slider-btn">Перейти</Button>
+                        <Link to="/p454"> <Button className="slider-btn">Перейти</Button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -32,7 +33,8 @@ export default function Slider() {
                     }}/>
 
                     <Carousel.Caption>
-                        <Button className="slider-btn">Перейти</Button>
+                        <Link to="/products"> <Button className="slider-btn">Перейти</Button></Link>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,7 +47,8 @@ export default function Slider() {
                     }}/>
 
                     <Carousel.Caption>
-                        <Button className="slider-btn">Перейти</Button>
+                        <Link to="/endTools"> <Button className="slider-btn">Перейти</Button></Link>
+
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

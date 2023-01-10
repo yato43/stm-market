@@ -177,7 +177,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 807px) {
   .hamburger {
     display: block;
   }
@@ -361,7 +361,7 @@ footer {
     cursor: pointer;
 
     &:hover {
-      color: #a6a6a6 !important;
+      color: #BBDEFB !important;
     }
   }
 
@@ -370,7 +370,7 @@ footer {
       text-decoration: none!important;
       color: #fff;
       &:hover{
-        color: #a6a6a6
+        color: #BBDEFB
       }
     }
     //margin-right: 25%;
@@ -472,6 +472,7 @@ footer {
     left: 0;
     color: #000;
     margin-bottom: 0;
+    width: 100%;
 
   }
 }
@@ -650,4 +651,12 @@ h2 {
 
 .tableTitle{
   border-bottom: 1px solid #000!important;
+}
+
+.toolList{
+  list-style: inherit!important;
+
+  li{
+    margin-left: 20px;
+  }
 }

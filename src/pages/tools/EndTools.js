@@ -1,19 +1,27 @@
 
-import Card from "../components/Card";
-import p454 from "../image/products/454.jpg";
-import p400  from "../image/products/sr-400.jpg";
+import Card from "../../components/Card";
+import p454 from "../../image/products/454.jpg";
+import p531 from "../../image/products/531.jpg";
 
 
-
-
-function Tools() {
+export default function EndTools() {
     return (
-        <div className="container" >
-            <h1>Инструменты</h1>
+        <div className="container">
+            <h1>Заточные станки с ЧПУ для концевого инструмента</h1>
 
             <div className="goods">
-                <Card image={p454} name='Заточные станки с ЧПУ для концевого инструмента' link = '/endTools'/>
-                <Card image={p400} name='Заточные станки' link = '/rollingMachines'/>
+                <Card image={p454} name='Полуавтомат шлифовально-заточный с ЧПУ 454-ой серии' link = '/p454'/>
+                <Card image={p531} name='Заточной станок с ЧПУ для концевого инструмента 531-й серии' link = '/p531'/>
+
+            </div>
+            <div>
+                <h2>Заточные станки от компании «СТМ-Маркет»: основные преимущества</h2>
+                <ul  className='toolList'>
+                    <li>возможность обрабатывать изделия большого диаметра – от 200 до 250 мм;</li>
+                    <li>электродвигатель с высокими показателями мощности – 8 кВт;</li>
+                    <li>компактные размеры (установить станок с ЧПУ для концевого инструмента можно даже в ограниченном пространстве) – 240х450х265 см (модель устройства 531-й серии) и 135х300х202 см (модель приспособления 454-ойсерии);</li>
+                    <li>наличие эффективного и интуитивно понятного программного обеспечения (G-code – ISO-7 bit), на базе которого можно осуществлять создание управляющих программных продуктов для обработки цилиндрических и конических (со сферическим и прямым торцом) фрез, а также спиральных сверл.</li>
+                </ul>
             </div>
             <div>
 
@@ -31,4 +39,3 @@ function Tools() {
     );
 }
 
-export default Tools
